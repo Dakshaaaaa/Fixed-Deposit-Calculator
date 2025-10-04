@@ -3,27 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FD Calculator</title>
+    <title>Magical FD Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="background-animation"></div>
     <div class="container">
-        <h1>FD Calculator</h1>
+        <h1><i class="fas fa-magic"></i> Money Wizard's Pot🧙‍♀️</h1>
+
         <div class="form-group">
-            <label for="principle">Principle Amount</label>
-            <input type="number" id="principle" placeholder="Enter the principle amount">
+            <label for="principle">Principal Amount (₹)</label>
+            <input type="number" id="principle" placeholder="e.g., 50,000" min="1" step="any" required aria-label="Enter principal amount">
         </div>
         <div class="form-group">
-            <label for="interestRate">Interest Rate</label>
-            <input type="number" id="interestRate" placeholder="Enter the Interest Rate">
+            <label for="interestRate">Annual Interest Rate (%)</label>
+            <input type="number" id="interestRate" placeholder="e.g., 7.5" min="0" step="any" required aria-label="Enter annual interest rate">
         </div>
         <div class="form-group">
-            <label for="tenure">Tenure (in years):</label>
-            <input type="number" id="tenure" placeholder="Enter the tenure in years">
+            <label for="tenure">Tenure (in years)</label>
+            <input type="number" id="tenure" placeholder="e.g., 5" min="0.1" step="any" required aria-label="Enter tenure in years">
         </div>
-        <button id="calculateBtn" class="calculate-btn">Calculate</button>
-        <p id="result" class="result">Maturity Amount:</p>
+
+        <div class="form-group">
+            <label for="compoundingFrequency">Compounding Frequency</label>
+            <select id="compoundingFrequency" aria-label="Select compounding frequency">
+                <option value="1">Annually</option>
+                <option value="2">Semi-Annually</option>
+                <option value="4" selected>Quarterly (Standard)</option>
+                <option value="12">Monthly</option>
+            </select>
+        </div>
+
+        <button id="calculateBtn" class="calculate-btn">Calculate Magic ✨</button>
+
+        <div class="results-box">
+            <p id="error-message" class="error-message" role="alert" style="display:none;"></p>
+            <div class="result-item">
+                <span class="result-label">💰 Maturity Amount:</span>
+                <span id="maturityResult" class="result main-result">₹0.00</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">📈 Interest Earned:</span>
+                <span id="interestResult" class="result sub-result">₹0.00</span>
+            </div>
+            <div class="result-feedback">
+                <span id="feedbackMessage" class="feedback-message"></span>
+            </div>
+        </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
