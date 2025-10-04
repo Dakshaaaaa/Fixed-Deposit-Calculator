@@ -38,11 +38,11 @@ This project demonstrates strong front-end skills by integrating third-party lib
 | **jQuery & Select2** | Used to transform the basic HTML select into a highly customizable dropdown menu. |
 | **Google Fonts** | `Pacifico` for the title and `Inter` for all body text. |
 
-## 📸 Screenshots
+## 📸Demo
 
 | Money Wizard's Pot UI |
 | :---: |
-| ![FD Calculator Main Screen](/UI.jpeg) |
+| ![FD Calculator Main Screen Animation](/demo.gif) |
 
 ## 🚀 How to Run Locally
 
