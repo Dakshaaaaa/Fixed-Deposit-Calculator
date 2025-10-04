@@ -13,8 +13,6 @@
 | **Dynamic Feedback** | Provides contextual encouragement based on the size of the calculated interest amount (e.g., "💰 Excellent earnings!"). |
 | **Local Currency Support** | Results are formatted using `Intl.NumberFormat` for accurate Indian Rupee (₹) presentation. |
 
-***
-
 ## ⚙️ Formula Used
 
 The calculator relies on the standard Compound Interest formula:
@@ -28,8 +26,6 @@ Where:
 * $n$ = **Compounding Frequency** per year
 * $t$ = **Time Period** (in years)
 
-***
-
 ## 💻 Technologies Used
 
 This project demonstrates strong front-end skills by integrating third-party libraries for enhanced functionality and aesthetics.
@@ -42,14 +38,11 @@ This project demonstrates strong front-end skills by integrating third-party lib
 | **jQuery & Select2** | Used to transform the basic HTML select into a highly customizable dropdown menu. |
 | **Google Fonts** | `Pacifico` for the title and `Inter` for all body text. |
 
-***
-
 ## 📸 Screenshots
 
 | Money Wizard's Pot UI |
 | :---: |
 | ![FD Calculator Main Screen](/UI.jpeg) |
-***
 
 ## 🚀 How to Run Locally
 
